@@ -14,11 +14,11 @@ def get_symbols(left_side, right_side):
         for i, symbol in enumerate(symbols):
             if symbol == '+':
                 goal_solution += left_side[i + 1]
-            if symbol == '-':
+            elif symbol == '-':
                 goal_solution -= left_side[i + 1]
-            if symbol == '/':
+            elif symbol == '/':
                 goal_solution /= left_side[i + 1]
-            if symbol == '*':
+            elif symbol == '*':
                 goal_solution *= left_side[i + 1]
         if goal_solution == right_side:
             solved = True
